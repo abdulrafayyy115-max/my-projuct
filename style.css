@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #222;
+    transition: 0.3s;
+}
+
+
+/* Header */
+
+header {
+    height: 75px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: white;
+    border-bottom: 1px solid #ddd;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #168aad;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #168aad;
+}
+
+#modeBtn {
+    padding: 10px 15px;
+    border: 1px solid #222;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px 7%;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1800&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-content p:first-child {
+    color: #5dd1f5;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #5dd1f5;
+    display: block;
+}
+
+.hero-content p {
+    line-height: 1.7;
+}
+
+.hero-btn {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 14px 25px;
+
+    background: #168aad;
+    color: white;
+
+    text-decoration: none;
+}
+
+
+/* Destinations */
+
+.destinations {
+    padding: 90px 7%;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.heading p {
+    color: #168aad;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.heading h2 {
+    font-size: 38px;
+    margin-top: 10px;
+}
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 22px;
+}
+
+.card-content h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.card button,
+.about button,
+form button {
+    margin-top: 18px;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    background: #168aad;
+    color: white;
+
+    cursor: pointer;
+}
+
+.card button:hover,
+.about button:hover,
+form button:hover {
+    background: #0d607c;
+}
+
+
+/* About */
+
+.about {
+    padding: 100px 7%;
+
+    background: #edf7f9;
+
+    text-align: center;
+}
+
+.about div {
+    max-width: 700px;
+    margin: auto;
+}
+
+.about > div > p:first-child {
+    color: #168aad;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.about h2 {
+    font-size: 40px;
+    margin: 12px 0 20px;
+}
+
+.about div p {
+    line-height: 1.8;
+    color: #555;
+}
+
+
+/* Contact */
+
+.contact {
+    padding: 90px 7%;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #ccc;
+    outline: none;
+
+    font-size: 15px;
+}
+
+form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+form button {
+    margin-top: 0;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background: #111;
+    color: white;
+}
+
+
+/* Dark Mode */
+
+body.dark {
+    background: #151515;
+    color: white;
+}
+
+body.dark header {
+    background: #1e1e1e;
+    border-color: #333;
+}
+
+body.dark nav a {
+    color: white;
+}
+
+body.dark #modeBtn {
+    color: white;
+    border-color: white;
+}
+
+body.dark .destinations {
+    background: #151515;
+}
+
+body.dark .card {
+    background: #222;
+    border-color: #333;
+}
+
+body.dark .card-content p {
+    color: #aaa;
+}
+
+body.dark .about {
+    background: #202020;
+}
+
+body.dark .about div p {
+    color: #bbb;
+}
+
+body.dark form input,
+body.dark form textarea {
+    background: #222;
+    color: white;
+    border-color: #444;
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    header {
+        height: auto;
+        padding: 20px 5%;
+
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 50px 5%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .heading h2 {
+        font-size: 30px;
+    }
+
+    .destinations,
+    .contact {
+        padding: 60px 5%;
+    }
+}
